@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text-delete">will be delete</h1>
+    <input id="text-field" type="text" placeholder="please type Delete">
+    <button id="will-delete" disabled>Delete</button>
+    <script>
+        document.getElementById('text-field').addEventListener('keyup',function(event){
+            const get = event.target.value
+            const deleteBtn = document.getElementById('will-delete')
+            if(get.toLowerCase() === 'delete' ){
+                deleteBtn.removeAttribute('disabled')
+            }
+            else{
+                deleteBtn.setAttribute('disabled',true)
+            }
+        //calling the input area > giving function > getting the data by " 'paremeter name'.target.value " >  calling the button > giving condition > in "else{}" this part is tricky  
+        })
+        document.getElementById('will-delete').addEventListener('click',function(){
+            const secret = document.getElementById('text-delete')
+            secret.style.display='none'
+        })
+    </script>
+</body>
+</html>

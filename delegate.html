@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <section>
+        <ul id="ul-container">
+            <li class="item">bambo khai 1</li>
+            <li class="item">bambo khai 2</li>
+            <li class="item">bambo khai 3</li>
+            <li class="item">bambo khai 4</li>
+            <li class="item">bambo khai 5</li>
+            <li class="item">bambo khai 6</li>
+        </ul>
+        <button id="btn-for-making">mkae a list</button>
+    </section>
+    <script>
+        document.getElementById('btn-for-making').addEventListener('click',function(event){
+            const li = document.createElement('li')
+            li.innerText='voila added '
+            li.classList.add('item')
+           const ul = document.getElementById('ul-container')
+           ul.appendChild(li)
+
+        })
+        // const array = document.getElementsByClassName('item')
+        // for(const item of array){
+        //     item.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }   <--- in here game the funtion into specific child and not the parentchild
+        document.getElementById('ul-container').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target)
+        })
+    </script>
+</body>
+</html>

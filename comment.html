@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New comment</title>
+</head>
+<body>
+    <h1>please add comment</h1>
+    <div id="first-div">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iure minima, nobis soluta maiores nulla consequatur deleniti tempore quo officia nisi eius adipisci hic nam placeat nihil voluptate perferendis quasi odio quisquam voluptates reprehenderit animi. Non accusamus nulla odit assumenda quos dolorum illum a amet! Ducimus commodi corporis recusandae similique.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iure minima, nobis soluta maiores nulla consequatur deleniti tempore quo officia nisi eius adipisci hic nam placeat nihil voluptate perferendis quasi odio quisquam voluptates reprehenderit animi. Non accusamus nulla odit assumenda quos dolorum illum a amet! Ducimus commodi corporis recusandae similique.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iure minima, nobis soluta maiores nulla consequatur deleniti tempore quo officia nisi eius adipisci hic nam placeat nihil voluptate perferendis quasi odio quisquam voluptates reprehenderit animi. Non accusamus nulla odit assumenda quos dolorum illum a amet! Ducimus commodi corporis recusandae similique.</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="50" rows="8"></textarea><br>
+        <button id="btn-post">POST</button>
+    </div>
+    <script>
+        //adding the main listener
+        document.getElementById('btn-post').addEventListener('click',function(){
+            //1. we are calling the text area
+            const inputed = document.getElementById('new-comment')
+
+            //2. then taking the data which we get from text area in a variable
+            const inputedCmmnt = inputed.value
+
+            //3. making a paragrapgh tag for placing the data from text area
+            const p = document.createElement('p')
+
+            //4. implementing the text in paragraph tag
+            p.innerText=inputedCmmnt
+
+            //5. then calling the parent tag of paragrapgh tag
+            const firstDiv = document.getElementById('first-div')
+
+            //8.adding the paragrapgh tag in the parent tag
+            firstDiv.append(p)
+
+            //7. after clicking making the text area clear for new data
+            inputed.value=''
+        })
+    </script>
+</body>
+</html>

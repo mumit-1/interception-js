@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>COUNT</title>
+</head>
+
+<body>
+    <h1 class="text-center text-4xl mt-3">welcome to count</h1>
+    <h2 id="zero" class="text-center text-4xl mt-5">0</h2>
+    <div class="flex justify-center mt-5 gap-2">
+        <div><button id="minus" class="btn btn-primary bg-red-600 border-none text-5xl">-</button></div>
+        <div><button id="plus" class="btn btn-primary bg-green-600 border-none text-5xl">+</button></div>
+    </div>
+    <script>
+        let sum = 0;
+        document.getElementById('plus').addEventListener('click',function(){
+            const theZero = document.getElementById('zero')
+            sum ++;
+            theZero.innerText = sum
+        })
+        document.getElementById('minus').addEventListener('click',function(){
+            const theZero = document.getElementById('zero')
+            sum --;
+            theZero.innerText = sum
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>expolring more events</h1>
+    <button id="event-1">events1</button>
+    <button id="event-2">events2</button>
+    <input id="text-field" type="text">
+    <script>
+        // document.getElementById('text-field').addEventListener('keydown',function(event){
+        //     console.log(event.target.value);
+        // })
+        // document.getElementById('text-field').addEventListener('keypress',function(event){
+        //     console.log(event.target.value);
+        // })
+        document.getElementById('text-field').addEventListener('keyup',function(event){
+            console.log(event.target.value); //will use
+        })
+ 
+        document.getElementById('text-field').addEventListener('focus',function(){
+            console.log('got triggered');
+        })
+        document.getElementById('text-field').addEventListener('blur',function(){
+            console.log('got triggered blur');
+        })
+        document.getElementById('event-1').addEventListener('mousemove',function(){
+            console.log('choltase gari');
+        })
+        document.getElementById('event-2').addEventListener('mouseenter',function(){
+            console.log('choltase gari');
+        })
+    </script>
+</body>
+</html>
